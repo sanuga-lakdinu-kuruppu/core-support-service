@@ -1,4 +1,4 @@
-import { createConnection } from "./config/databaseConnection.mjs";
+import createConnection from "./config/databaseConnection.mjs";
 import { fetchTripDetailsAndTrigger } from "./service/service.mjs";
 
 createConnection();
