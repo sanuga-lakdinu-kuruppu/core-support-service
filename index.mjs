@@ -6,24 +6,24 @@ createConnection();
 export const handler = async (event) => {
   console.log(`core support service event triggered`);
   try {
-    const {
-      internalEventType,
-      tripId,
-      startLocation,
-      endLocation,
-      route,
-      schedule,
-      vehicle,
-      driver,
-      operator,
-      conductor,
-      cancellationPolicy,
-    } = JSON.parse(event.detail);
+    const { internalEventType } = JSON.parse(event.detail);
 
     if (internalEventType === "EVN_TRIP_CREATED") {
       console.log(
         `core support service event triggered, ${internalEventType} `
       );
+      const {
+        tripId,
+        startLocation,
+        endLocation,
+        route,
+        schedule,
+        vehicle,
+        driver,
+        operator,
+        conductor,
+        cancellationPolicy,
+      } = JSON.parse(event.detail);
       await fetchTripDetailsAndTrigger(
         tripId,
         startLocation,
