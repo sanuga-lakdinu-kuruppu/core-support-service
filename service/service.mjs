@@ -63,6 +63,7 @@ export const fetchTripDetailsAndTrigger = async (
             cancellationPolicy: cancellationPolicyData,
             schedule: scheduleData,
           }),
+          EventBusName: "busriya.com_event_bus",
         },
       ],
     };
