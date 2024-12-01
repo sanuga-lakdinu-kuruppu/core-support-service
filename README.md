@@ -1,2 +1,5 @@
 # core-support-service
- support functions for core services in the busriya system
+
+YR3COBSCCOMP232P002
+
+##### api for core-support-service in the busriya system
