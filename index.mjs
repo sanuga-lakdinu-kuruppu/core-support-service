@@ -6,7 +6,7 @@ createConnection();
 export const handler = async (event) => {
   console.log(`core support service event triggered`);
   try {
-    const { internalEventType } = JSON.parse(event.detail);
+    const { internalEventType } = event.detail;
 
     if (internalEventType === "EVN_TRIP_CREATED") {
       console.log(
