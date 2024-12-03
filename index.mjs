@@ -23,7 +23,7 @@ export const handler = async (event) => {
         operator,
         conductor,
         cancellationPolicy,
-      } = JSON.parse(event.detail);
+      } = event.detail;
       await fetchTripDetailsAndTrigger(
         tripId,
         startLocation,
