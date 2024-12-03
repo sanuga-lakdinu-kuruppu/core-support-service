@@ -13,6 +13,7 @@ const eventBridge = new AWS.EventBridge({
 
 export const fetchTripDetailsAndTrigger = async (
   tripId,
+  tripDate,
   startLocation,
   endLocation,
   route,
@@ -53,6 +54,7 @@ export const fetchTripDetailsAndTrigger = async (
           Detail: JSON.stringify({
             internalEventType: "EVN_TRIP_DETAIL_FETCHED",
             tripId: tripId,
+            tripDate: tripDate,
             startLocation: startLocationData,
             endLocation: endLocationData,
             route: routeData,
