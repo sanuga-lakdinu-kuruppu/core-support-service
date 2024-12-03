@@ -48,7 +48,7 @@ export const fetchTripDetailsAndTrigger = async (
     const eventParams = {
       Entries: [
         {
-          Source: "aws.lambda",
+          Source: "core-support-service",
           DetailType: "TRIP_SUPPORT_SERVICE",
           Detail: JSON.stringify({
             internalEventType: "EVN_TRIP_DETAIL_FETCHED",
