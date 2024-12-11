@@ -1,4 +1,4 @@
-name: Deploy Lambda to AWS CORE-SERVICE
+name: Deploy Lambda to AWS CORE-SUPPORT-SERVICE
 
 on:
   push:
